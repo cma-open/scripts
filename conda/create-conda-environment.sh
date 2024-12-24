@@ -11,16 +11,19 @@
 
 # Set code root directory as script constant
 CODE_DIR="$(dirname $(dirname "${PWD}"))"
-# Confirm root dir to user
-echo "Code root directory: ${CODE_DIR}"
 
 # Set name of environment file holding dependencies list
-CONA_ENV_FILE='environment.yml'
+CONDA_ENV_FILE='environment.yml'
 
 # envs dir will be at repo root
 ENVS_DIR = "${CODE_DIR}/envs"
 
+# Confirm dir locations to user
+echo "Code root directory: ${CODE_DIR}"
+echo "Code env file name: ${CONDA_ENV_FILE}"
+echo "Code envs directory: ${ENVS_DIR}"
+
 echo "Creating conda environment"
-conda env create -f "${ENVS_DIR}/${CONA_ENV_FILE}"
+conda env create -f "${ENVS_DIR}/${CONDA_ENV_FILE}"
 
 echo " --------------------------------------------------"
