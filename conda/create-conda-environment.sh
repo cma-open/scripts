@@ -16,7 +16,7 @@ CODE_DIR="$(dirname $(dirname "${PWD}"))"
 CONDA_ENV_FILE='environment.yml'
 
 # envs dir will be at repo root
-ENVS_DIR = "${CODE_DIR}/envs"
+ENVS_DIR="${CODE_DIR}/envs"
 
 # Confirm dir locations to user
 echo "Code root directory: ${CODE_DIR}"
